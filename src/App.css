@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+body {
+  font-family: "nunito", sans-serif;
+  background-color: black;
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+.tab-toggle {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.heading {
+  font-family: "sora", sans-serif;
+}
+.tab {
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #444;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  background-color: transparent;
+  border: none;
+}
+
+.tab:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.active-tab {
+  background-color: #1f2937; /* Tailwind gray-800 */
+  color: white;
+}
+.loading-screen {
+  height: 100vh;
+  background: #101828;
+  color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-text {
+  font-size: 5rem;
+  font-weight: bold;
+  z-index: 2;
+  position: relative;
+}
+
+.main-content {
+  padding: 4rem;
+  background: #fff;
+  min-height: 100vh;
+  text-align: center;
+}
