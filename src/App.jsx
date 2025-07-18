@@ -15,7 +15,7 @@ import "./App.css";
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {

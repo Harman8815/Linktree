@@ -298,7 +298,7 @@ export const fullstackProjects = [
     },
     liveLink: "#",
     githubLink: "https://github.com/Harman8815/Project-Management",
-    status: "In Development",
+    status: "Completed",
     difficulty: "Expert",
     duration: "8 weeks",
     highlights: ["Enterprise Grade", "Team Collaboration", "Scalable Architecture"],
