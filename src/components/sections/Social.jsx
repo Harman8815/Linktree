@@ -185,7 +185,7 @@ const Social = ({ darkBg }) => {
                   darkBg ? "text-white" : "text-gray-900"
                 }`}
               >
-                {(socialStats.totalFollowers / 1000).toFixed(1)}K+
+                {socialStats.totalFollowers }+
               </div>
               <div
                 className={`text-sm ${
