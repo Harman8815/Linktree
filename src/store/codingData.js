@@ -2,40 +2,201 @@ const codingData = [
   {
     platform: "LeetCode",
     img: "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png",
-    stats: [
-      { label: "Questions Solved", value: "1000+" },
-      { label: "Streak", value: "500+ days" },
-      { label: "Peak Rating", value: "1680+" }
+    profile: "https://leetcode.com/yourprofile",
+    primaryColor: "#FFA116",
+    secondaryColor: "#FF6B35",
+    overview: {
+      totalSolved: "1,247",
+      globalRank: "Top 5%",
+      contestRank: "1,856",
+      streak: "127 days",
+    },
+    problemStats: [
+      { difficulty: "Easy", solved: 456, total: 800, color: "bg-green-500" },
+      { difficulty: "Medium", solved: 623, total: 1600, color: "bg-yellow-500" },
+      { difficulty: "Hard", solved: 168, total: 700, color: "bg-red-500" },
     ],
-    profile: "https://leetcode.com/yourprofile"
+    badges: [
+      { name: "50 Days Badge", icon: "🔥", rarity: "rare" },
+      { name: "100 Days Badge", icon: "💯", rarity: "epic" },
+      { name: "Knight", icon: "⚔️", rarity: "legendary" },
+      { name: "Guardian", icon: "🛡️", rarity: "epic" },
+    ],
+    achievements: [
+      { label: "Contest Rating", value: "1,847", icon: "trophy" },
+      { label: "Max Rating", value: "1,923", icon: "star" },
+      { label: "Contests Attended", value: "47", icon: "calendar" },
+      { label: "Acceptance Rate", value: "67.8%", icon: "target" },
+    ],
+    languages: ["Python", "Java", "C++", "JavaScript"],
+    recentActivity: "Solved 3 problems today",
   },
   {
     platform: "GeeksforGeeks",
     img: "https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg",
-    stats: [
-      { label: "Problems Solved", value: "600+" },
-      { label: "Institute Rank", value: "1" }
+    profile: "https://auth.geeksforgeeks.org/user/yourprofile",
+    primaryColor: "#0F9D58",
+    secondaryColor: "#2E7D32",
+    overview: {
+      codingScore: "2,847",
+      institutionRank: "1",
+      overallRank: "456",
+      problemsSolved: "892",
+    },
+    categories: [
+      { name: "Arrays", solved: 156, color: "bg-blue-500" },
+      { name: "Dynamic Programming", solved: 89, color: "bg-purple-500" },
+      { name: "Trees", solved: 134, color: "bg-green-500" },
+      { name: "Graphs", solved: 78, color: "bg-red-500" },
+      { name: "Strings", solved: 112, color: "bg-yellow-500" },
     ],
-    profile: "https://auth.geeksforgeeks.org/user/yourprofile"
+    badges: [
+      { name: "Problem Setter", icon: "📝", rarity: "legendary" },
+      { name: "Monthly Coding", icon: "📅", rarity: "epic" },
+      { name: "Interview Expert", icon: "💼", rarity: "rare" },
+    ],
+    achievements: [
+      { label: "Articles Published", value: "12", icon: "book" },
+      { label: "Practice Score", value: "2,847", icon: "code" },
+      { label: "Contest Participated", value: "23", icon: "trophy" },
+      { label: "Peer Rank", value: "Top 2%", icon: "users" },
+    ],
+    specializations: ["Data Structures", "Algorithms", "System Design"],
+    recentActivity: "Published article on Binary Trees",
   },
   {
-    platform: "InterviewBit",
-    img: "https://upload.wikimedia.org/wikipedia/commons/6/65/InterviewBit_Logo.png",
-    stats: [
-      { label: "Problems Solved", value: "350+" },
-      { label: "Global Rank", value: "Top < 7000" }
+    platform: "CodeChef",
+    img: "https://cdn.codechef.com/sites/all/themes/abessive/logo-3.png",
+    profile: "https://www.codechef.com/users/yourprofile",
+    primaryColor: "#5B4638",
+    secondaryColor: "#8D6E63",
+    overview: {
+      currentRating: "1,847",
+      maxRating: "1,923",
+      globalRank: "2,456",
+      stars: "4⭐",
+    },
+    contestStats: [
+      { type: "Long Challenge", participated: 24, bestRank: 156 },
+      { type: "Cook-Off", participated: 18, bestRank: 234 },
+      { type: "Lunchtime", participated: 15, bestRank: 189 },
     ],
-    profile: "https://www.interviewbit.com/profile/yourprofile"
+    badges: [
+      { name: "4 Star Coder", icon: "⭐", rarity: "epic" },
+      { name: "Long Challenge Winner", icon: "🏆", rarity: "legendary" },
+      { name: "Consistent Performer", icon: "📈", rarity: "rare" },
+    ],
+    achievements: [
+      { label: "Problems Solved", value: "567", icon: "code" },
+      { label: "Contest Rating", value: "1,847", icon: "trophy" },
+      { label: "Best Rank", value: "156", icon: "medal" },
+      { label: "Submission Accuracy", value: "73.2%", icon: "target" },
+    ],
+    languages: ["C++", "Python", "Java"],
+    recentActivity: "Ranked 234 in recent Cook-Off",
+  },
+  {
+    platform: "Codeforces",
+    img: "https://sta.codeforces.com/s/34094/images/codeforces-sponsored-by-ton.png",
+    profile: "https://codeforces.com/profile/yourprofile",
+    primaryColor: "#1976D2",
+    secondaryColor: "#1565C0",
+    overview: {
+      currentRating: "1,654",
+      maxRating: "1,789",
+      rank: "Expert",
+      contestsGiven: "89",
+    },
+    ratingHistory: [
+      { contest: "Div 2", rating: 1654, change: "+67" },
+      { contest: "Div 1", rating: 1587, change: "-23" },
+      { contest: "Educational", rating: 1610, change: "+45" },
+    ],
+    badges: [
+      { name: "Expert", icon: "🎯", rarity: "epic" },
+      { name: "Problem Solver", icon: "🧩", rarity: "rare" },
+      { name: "Contest Regular", icon: "📊", rarity: "common" },
+    ],
+    achievements: [
+      { label: "Max Rating", value: "1,789", icon: "star" },
+      { label: "Problems Solved", value: "1,234", icon: "code" },
+      { label: "Contest Rank", value: "Expert", icon: "trophy" },
+      { label: "Contribution", value: "+45", icon: "heart" },
+    ],
+    problemStats: [
+      { rating: "800-1000", solved: 234 },
+      { rating: "1000-1200", solved: 189 },
+      { rating: "1200-1400", solved: 156 },
+      { rating: "1400+", solved: 89 },
+    ],
+    recentActivity: "Solved Div 2 C problem",
   },
   {
     platform: "HackerRank",
     img: "https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png",
-    stats: [
-      { label: "Questions Solved", value: "100+" },
-      { label: "Java Badge", value: "5★" }
+    profile: "https://www.hackerrank.com/yourprofile",
+    primaryColor: "#00EA64",
+    secondaryColor: "#00C853",
+    overview: {
+      globalRank: "12,456",
+      problemsSolved: "234",
+      certificates: "8",
+      hackathons: "5",
+    },
+    domainStats: [
+      { domain: "Java", stars: 5, badge: "Gold", color: "bg-yellow-500" },
+      { domain: "Python", stars: 4, badge: "Silver", color: "bg-gray-400" },
+      { domain: "SQL", stars: 5, badge: "Gold", color: "bg-yellow-500" },
+      { domain: "Problem Solving", stars: 4, badge: "Silver", color: "bg-gray-400" },
+      { domain: "Algorithms", stars: 3, badge: "Bronze", color: "bg-orange-600" },
     ],
-    profile: "https://www.hackerrank.com/yourprofile"
-  }
-];
+    badges: [
+      { name: "Java Gold", icon: "☕", rarity: "legendary" },
+      { name: "SQL Master", icon: "🗄️", rarity: "epic" },
+      { name: "Problem Solver", icon: "🧠", rarity: "rare" },
+    ],
+    achievements: [
+      { label: "Certificates Earned", value: "8", icon: "certificate" },
+      { label: "Hackathons Won", value: "2", icon: "trophy" },
+      { label: "Skills Verified", value: "12", icon: "check" },
+      { label: "Interview Prep", value: "95%", icon: "briefcase" },
+    ],
+    certificates: ["Java (Advanced)", "SQL (Advanced)", "Problem Solving (Intermediate)"],
+    recentActivity: "Earned Java Advanced Certificate",
+  },
+  {
+    platform: "InterviewBit",
+    img: "https://upload.wikimedia.org/wikipedia/commons/6/65/InterviewBit_Logo.png",
+    profile: "https://www.interviewbit.com/profile/yourprofile",
+    primaryColor: "#FF6B35",
+    secondaryColor: "#E65100",
+    overview: {
+      globalRank: "4,567",
+      problemsSolved: "456",
+      interviewExp: "23",
+      codingScore: "1,847",
+    },
+    topicStats: [
+      { topic: "Arrays", solved: 45, total: 50, color: "bg-blue-500" },
+      { topic: "Linked Lists", solved: 23, total: 25, color: "bg-green-500" },
+      { topic: "Trees", solved: 34, total: 40, color: "bg-purple-500" },
+      { topic: "Dynamic Programming", solved: 28, total: 35, color: "bg-red-500" },
+      { topic: "System Design", solved: 12, total: 15, color: "bg-yellow-500" },
+    ],
+    badges: [
+      { name: "Interview Ready", icon: "💼", rarity: "epic" },
+      { name: "Coding Ninja", icon: "🥷", rarity: "legendary" },
+      { name: "System Designer", icon: "🏗️", rarity: "rare" },
+    ],
+    achievements: [
+      { label: "Interview Experiences", value: "23", icon: "chat" },
+      { label: "Referrals Given", value: "8", icon: "users" },
+      { label: "Mock Interviews", value: "15", icon: "video" },
+      { label: "Success Rate", value: "87%", icon: "trending-up" },
+    ],
+    companies: ["Google", "Microsoft", "Amazon", "Facebook"],
+    recentActivity: "Completed System Design mock interview",
+  },
+]
 
-export default codingData;
+export default codingData

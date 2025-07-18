@@ -1,56 +1,73 @@
-import React, { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
+import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LoadingScreen from "./components/LoadingScreen";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Home from "./components/Home";
-import LoadingScreen from "./components/LoadingScreen.jsx";
+import Footer from "./components/Footer";
+import CodingProfiles from "./components/sections/CodingProfiles";
+import Projects from "./components/sections/Projects";
+import Social from "./components/sections/Social";
+import "./App.css";
 
-const App = () => {
-  const [darkBg, setDarkBg] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
-  const [exitduration, setexitduration] = useState(1.5);
-  const contentRef = useRef();
+// Register GSAP plugins
+gsap.registerPlugin(ScrollTrigger);
+
+function App() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 3000);
-    return () => clearTimeout(timer);
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setDarkMode(savedTheme === "dark");
+    }
   }, []);
 
   useEffect(() => {
-    if (!isLoading && contentRef.current) {
-      gsap.fromTo(
-        contentRef.current,
-        {
-          opacity: 0,
-          y: 50,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: "power3.out",
-        }
-      );
-    }
-  }, [isLoading]);
+    // Save theme preference
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
+  }, [darkMode]);
 
-  return isLoading ? (
-    <LoadingScreen
-      onFinish={() => setIsLoading(false)}
-      exitDuration={exitduration}
-    />
-  ) : (
-    <div
-      ref={contentRef}
-      className={`min-h-screen flex flex-col justify-between transition-colors duration-300 ${
-        darkBg ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
-      }`}
-    >
-      <Navbar darkBg={darkBg} toggleDark={() => setDarkBg(!darkBg)} />
-      <Home darkBg={darkBg} />
-      <Footer darkBg={darkBg} />
-    </div>
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  if (isLoading) {
+    return <LoadingScreen onFinish={handleLoadingComplete} />;
+  }
+
+  return (
+    <Router>
+      <div
+        className={`min-h-screen transition-all duration-500 font-body ${
+          darkMode ? "bg-gray-900 text-white" : "bg-gray-50 text-black"
+        }`}
+      >
+        <Navbar darkBg={darkMode} toggleDark={toggleDarkMode} />
+
+        <div className="pt-16 sm:pt-18 lg:pt-20">
+          <Routes>
+            <Route path="/" element={<Home darkBg={darkMode} />} />
+            <Route path="/coding" element={<CodingProfiles darkBg={darkMode} />} />
+            <Route path="/projects" element={<Projects darkBg={darkMode} />} />
+            <Route path="/social" element={<Social darkBg={darkMode} />} />
+
+            {/* Redirect unknown paths to home */}
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </div>
+
+        <Footer darkBg={darkMode} />
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;
