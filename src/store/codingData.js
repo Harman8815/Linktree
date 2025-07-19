@@ -158,21 +158,21 @@ const codingData = [
       { name: "Problem Solver", icon: "🧠", rarity: "rare" },
     ],
     achievements: [
-      { label: "Certificates Earned", value: "4", icon: "certificate" },
+      { label: "Certificates Earned", value: "8", icon: "certificate" },
       // { label: "Hackathons Won", value: "2", icon: "trophy" },
       { label: "Skills Verified", value: "12", icon: "check" },
       // { label: "Interview Prep", value: "95%", icon: "briefcase" },
     ],
-   certificates: [
-  "Java (Basic)",
-  "CSS (Basic)",
-  "SQL (Basic)",
-  "SQL (Intermediate)",
-  "Frontend Developer (React)",
-  "Rest API (Intermediate)",
-  "Software Engineer",
-  "Software Engineer Intern"
-],
+    certificates: [
+      "Java (Basic)",
+      "CSS (Basic)",
+      "SQL (Basic)",
+      "SQL (Intermediate)",
+      "Frontend Developer (React)",
+      "Rest API (Intermediate)",
+      "Software Engineer",
+      "Software Engineer Intern"
+    ],
 
     // recentActivity: "Earned Java Advanced Certificate",
   },
@@ -185,7 +185,7 @@ const codingData = [
     overview: {
       globalRank: "6868",
       problemsSolved: "321",
-      // interviewExp: "2",
+      UniversityRank: "1",
       codingScore: "58,993",
     },
     topicStats: [
@@ -206,6 +206,7 @@ const codingData = [
     ],
 
     achievements: [
+      { label: "Badges", value: "7", icon: "🏆" },
       // { label: "Interview Experiences", value: "23", icon: "chat" },
       // { label: "Referrals Given", value: "8", icon: "users" },
       // { label: "Mock Interviews", value: "15", icon: "video" },

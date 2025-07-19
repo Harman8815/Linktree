@@ -61,6 +61,9 @@ const CodingCard = ({
   overview,
   badges,
   achievements,
+  certificates,
+  languages,
+  specializations,
   problemStats,
   categories,
   domainStats,
@@ -241,66 +244,37 @@ const CodingCard = ({
           </div>
         </div>
       )}
-
-      {/* Problem Stats / Categories */}
-      {(problemStats || categories || domainStats || topicStats) && (
-        <div className="px-4 sm:px-6 pb-3 sm:pb-4">
+      {((certificates && certificates.length > 0) ||
+        (languages && languages.length > 0) ||
+        (specializations && specializations.length > 0)) && (
+        <div className="px-4 sm:px-6 pb-4 sm:pb-6">
           <h4
             className={`text-xs sm:text-sm font-semibold mb-2 sm:mb-3 ${
               darkBg ? "text-gray-300" : "text-gray-700"
             }`}
           >
-            {problemStats
-              ? "Problem Distribution"
-              : categories
-              ? "Categories"
-              : domainStats
-              ? "Domain Expertise"
-              : "Topic Progress"}
+            {certificates && certificates.length > 0
+              ? "Certificates"
+              : languages && languages.length > 0
+              ? "Languages"
+              : "Specializations"}
           </h4>
-          <div className="space-y-1.5 sm:space-y-2">
-            {(
-              problemStats ||
-              categories ||
-              domainStats ||
-              topicStats ||
-              []
+          <div className="flex flex-wrap gap-2">
+            {(certificates && certificates.length > 0
+              ? certificates
+              : languages && languages.length > 0
+              ? languages
+              : specializations
             ).map((item, index) => (
-              <div key={index} className="flex items-center justify-between">
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <div
-                    className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full ${
-                      item.color || "bg-blue-500"
-                    }`}
-                  />
-                  <span
-                    className={`text-xs sm:text-sm ${
-                      darkBg ? "text-gray-300" : "text-gray-700"
-                    }`}
-                  >
-                    {item.difficulty || item.name || item.domain || item.topic}
-                  </span>
-                </div>
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  {item.stars && (
-                    <div className="flex">
-                      {[...Array(item.stars)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-yellow-400 text-yellow-400"
-                        />
-                      ))}
-                    </div>
-                  )}
-                  <span
-                    className={`text-xs sm:text-sm font-medium ${
-                      darkBg ? "text-white" : "text-gray-900"
-                    }`}
-                  >
-                    {item.solved || item.value}
-                    {item.total && `/${item.total}`}
-                  </span>
-                </div>
+              <div
+                key={index}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-[10px] sm:text-xs font-medium
+            ${
+              darkBg ? "bg-gray-800 text-gray-200" : "bg-gray-100 text-gray-700"
+            }`}
+              >
+                <Certificate className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-500" />
+                {item}
               </div>
             ))}
           </div>
