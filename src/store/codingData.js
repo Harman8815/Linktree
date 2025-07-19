@@ -142,7 +142,7 @@ const codingData = [
     overview: {
       // globalRank: "12,456",
       problemsSolved: "111",
-      certificates: "4",
+      certificates: "8",
       // hackathons: "5",
     },
     domainStats: [
@@ -163,7 +163,17 @@ const codingData = [
       { label: "Skills Verified", value: "12", icon: "check" },
       // { label: "Interview Prep", value: "95%", icon: "briefcase" },
     ],
-    // certificates: ["Java (Advanced)", "SQL (Advanced)", "Problem Solving (Intermediate)"],
+   certificates: [
+  "Java (Basic)",
+  "CSS (Basic)",
+  "SQL (Basic)",
+  "SQL (Intermediate)",
+  "Frontend Developer (React)",
+  "Rest API (Intermediate)",
+  "Software Engineer",
+  "Software Engineer Intern"
+],
+
     // recentActivity: "Earned Java Advanced Certificate",
   },
   {
