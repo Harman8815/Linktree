@@ -122,7 +122,7 @@ const CodingProfiles = ({ darkBg }) => {
             />
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl sm:text-5xl lg:text-7xl leading-tight font-bold mb-4 sm:mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
             Coding Mastery
           </h1>
 
