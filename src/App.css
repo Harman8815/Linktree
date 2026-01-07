@@ -108,10 +108,12 @@
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
+  background: black;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  /* background: transparent; */
+  background: black;
   border-radius: 4px;
 }
 
@@ -127,13 +129,15 @@
 }
 
 ::-webkit-scrollbar-corner {
-  background: transparent;
+  /* background: transparent; */
+  background: black;
 }
 
 /* Firefox scrollbar styling */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #3b82f6 transparent;
+  scrollbar-color: #3b82f6 #1F2333
+;
 }
 
 /* Enhanced focus styles for accessibility */
