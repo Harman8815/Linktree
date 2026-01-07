@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import CodingProfiles from "./components/sections/CodingProfiles";
 import Projects from "./components/sections/Projects";
 import Social from "./components/sections/Social";
+import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
 
 // Register GSAP plugins
@@ -45,6 +46,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div
         className={`min-h-screen transition-all duration-500 font-body ${
           darkMode ? "bg-gray-900 text-white" : "bg-gray-50 text-black"
