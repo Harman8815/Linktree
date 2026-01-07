@@ -201,7 +201,7 @@ const LoadingScreen = ({ onFinish, exitDuration = 1.5 }) => {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 overflow-hidden"
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 overflow-hidden"
     >
       {/* Animated background */}
       <div className="absolute inset-0">

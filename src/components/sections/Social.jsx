@@ -126,7 +126,7 @@ const Social = ({ darkBg }) => {
             </div>
           </div>
 
-          <h1 className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl lg:text-7xl  leading-tight font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
             Social Connect
           </h1>
 

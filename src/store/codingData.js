@@ -6,20 +6,20 @@ const codingData = [
     primaryColor: "#FFA116",
     secondaryColor: "#FF6B35",
     overview: {
-      totalSolved: "1,074",
+      totalSolved: "1,564",
       globalRank: "Top 18%",
-      contestRank: "1,650+",
+      contestRank: "1,680+",
       streak: "550+ days",
     },
     problemStats: [
-      { difficulty: "Easy", solved: 368, total: 885, color: "bg-green-500" },
-      { difficulty: "Medium", solved: 562, total: 1881, color: "bg-yellow-500" },
-      { difficulty: "Hard", solved: 138, total: 851, color: "bg-red-500" },
+      { difficulty: "Easy", solved: 512, total: 921, color: "bg-green-500" },
+      { difficulty: "Medium", solved: 752, total: 1982, color: "bg-yellow-500" },
+      { difficulty: "Hard", solved: 198, total: 899, color: "bg-red-500" },
     ],
     badges: [
-      { name: "50 Days Badge", icon: "🔥", rarity: "rare" },
-      { name: "100 Days Badge", icon: "🏆", rarity: "epic" },
       { name: "365 Days Badge", icon: "🌟", rarity: "epic" },
+      { name: "Annual Badge 2024", icon: "🏆", rarity: "epic" },
+      { name: "Annual Badge 2025", icon: "🔥", rarity: "legendary" },
       { name: "500 Days Badge", icon: "📅", rarity: "legendary" },
       // { name: "Knight", icon: "⚔️", rarity: "legendary" },
       // { name: "Guardian", icon: "🛡️", rarity: "epic" },
@@ -30,7 +30,7 @@ const codingData = [
       { label: "Contests Attended", value: "20", icon: "calendar" },
       { label: "Acceptance Rate", value: "76.8%", icon: "target" },
     ],
-    languages: ["Python", "Java", "C++", "MySql"],
+    languages: [ "Java", "C++", "MySql","Pandas","JavaScript"],
     // recentActivity: "Solve 2 problems per day",
   },
   {
@@ -40,9 +40,9 @@ const codingData = [
     primaryColor: "#0F9D58",
     secondaryColor: "#2E7D32",
     overview: {
-      codingScore: "2514",
+      codingScore: "2534",
       institutionRank: "1",
-      GlobalRank: "12313",
+      // GlobalRank: "12313",
       problemsSolved: "750+",
     },
     categories: [
@@ -183,10 +183,10 @@ const codingData = [
     primaryColor: "#FF6B35",
     secondaryColor: "#E65100",
     overview: {
-      globalRank: "6868",
-      problemsSolved: "321",
+      globalRank: "5405",
+      problemsSolved: "344",
       UniversityRank: "1",
-      codingScore: "58,993",
+      codingScore: "63,277",
     },
     topicStats: [
       { topic: "Arrays", solved: 45, total: 50, color: "bg-blue-500" },
